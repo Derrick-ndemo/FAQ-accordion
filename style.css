@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* .work-sans-bruh {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+} */
+@font-face {
+    font-family: myfont;
+    src: url('assets/fonts/WorkSans-VariableFont_wght.ttf');
+}
+body {
+    /* background-color: #0A2344; */
+    font-family: myfont;
+    height: 100vh;
+    width: 1880;
+    background-image: url(assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-color: hsl(275, 100%, 97%);
+}
+
+
+.container {
+    max-width: 1440px;
+}
+
+.content {
+    width: 600px;
+    /* height: 500px; */
+    margin: 150px auto;
+    color: hsl(292, 42%, 14%);
+    background-color: white;
+    padding: 45px 45px;
+    border-radius: 10px;
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>; */
+    font-style: normal;
+}
+
+.faq__title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.faq__title h1 {
+    font-weight: 700;
+    padding-left: 10px;
+}
+
+.one, .content .faqs .info__box {
+    position: relative;
+    margin: 10px 10px;
+}
+
+.content .faqs .label {
+    position: relative;
+    padding: 10px 0px;
+    /* font-size: 30px; */
+    color: hsl(292, 42%, 14%);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.content .faqs .label::before {
+    content: url(assets/images/icon-plus.svg);
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+}
+
+
+.content .faqs .description {
+    position: relative;
+    background: white;
+    color: hsl(292, 16%, 49%);
+    height: 0;
+    font-size: 16px;
+    text-align: justify;
+    /* width: 500px; */
+    overflow: hidden;
+    transition: 0.5s;
+    font-weight: 400;
+}
+
+.one .description{
+    color: hsl(292, 16%, 49%);
+    transition: 0.5s;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.one .label::before {
+    content: url(assets/images/icon-plus.svg);
+    position: absolute;
+    top: 0%;
+    right: -20px;
+    transform: translateY(-50%);
+
+}
+
+
+hr {
+    width: inherit;
+    margin-left: 0;
+    border: 1px solid hsl(292, 16%, 49%);
+}
+
+.content .faqs.active .description {
+    height: 70px;
+}
+
+.content .faqs.active .label::before {
+    content: url(assets/images/icon-minus.svg);
+    /* margin-left: 5px; */
+}
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    position: relative;
+    bottom: 0;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
